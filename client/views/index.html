@@ -27,7 +27,7 @@
 			<button type="submit">Add</button>
 		</form>
 
-		
+
 		<ol>
 			<div class="row">
 				<h3 class="col-sm-4">Product Name</h3>
@@ -37,14 +37,14 @@
 			<div ng-repeat="product in products">
 				<li>
 					<div class="row">
-						<p class="col-sm-4">{{product.name | uppercase}}</p>
+						<p class="col-sm-4"><a href="{{product._id}}">{{product.name | uppercase}}</a></p>
 						<p class="col-sm-4">{{product.quantity | number}}</p>
 						<p class="col-sm-4">{{product.price | currency}}</p>
+						<button ng-click="remove(product._id)">Remove</button>
 					</div>
 				</li>
 			</div>
 		</ol>
-			
 
 
 

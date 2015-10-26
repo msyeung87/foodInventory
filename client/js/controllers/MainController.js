@@ -7,6 +7,8 @@ app.controller('MainController', ['$scope', '$resource', function($scope, $resou
 
   	$scope.products = [];
 
+  	// $scope.totals = products.quantity * products.price;
+
 	$scope.createItem = function(){
 		var product = new Product();
 		product.name = $scope.productName;
@@ -21,5 +23,12 @@ app.controller('MainController', ['$scope', '$resource', function($scope, $resou
 	      $scope.productPrice = '';
 	    });
 	}
+
+	$scope.remove = function(id){
+		console.log(id)
+		var product = Product(id)
+		product.remove
+	};
+
 
 }]);

@@ -21,6 +21,10 @@ app.get('/', function(req, res){
 
 app.get('/api/products', productController.list);
 app.post('/api/products', productController.create)
+app.delete('/api/products/:id', function(req, res){
+	var id = req.params.id;
+	console.log(id)
+})
 
 
 app.listen(3000, function(){
